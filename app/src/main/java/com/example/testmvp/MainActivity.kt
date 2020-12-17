@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startActivity(Intent(this, RecyclerViewActivity::class.java))
+        //startActivity(Intent(this, RecyclerViewActivity::class.java))
     }
 }
