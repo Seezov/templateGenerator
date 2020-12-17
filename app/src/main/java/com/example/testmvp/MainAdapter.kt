@@ -3,11 +3,10 @@ package com.example.testmvp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_string.view.*
 
 class MainAdapter(val items: ArrayList<String>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -22,19 +21,17 @@ class MainAdapter(val items: ArrayList<String>) : RecyclerView.Adapter<MainAdapt
     }
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
-        //2
+
         private var view: View = v
 
-        //3
         init {
             v.setOnClickListener(this)
         }
 
         fun onBind(item: String) {
-            view.findViewById<TextView>(R.id.tvTitle).text = item
+            view.tvTitle.text = item
         }
 
-        //4
         override fun onClick(v: View) {
             // TODO: OnClick
         }
